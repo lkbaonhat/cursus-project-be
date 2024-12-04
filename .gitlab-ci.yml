@@ -1,0 +1,57 @@
+# image: node:20-alpine
+# services:
+#   - docker:20.10.7-dind
+
+# stages:
+#   - build
+#   - deploy
+
+# variables:
+#   VPS_HOST: 14.225.212.121 # IP address of the VPS
+#   VPS_USER: root # User on the VPS
+#   DEPLOY_PATH: /home/root/BE # Path on the VPS where the app is stored
+
+# # Build Stage - Build the project locally
+# build_project:
+#   stage: build
+#   image: node:20-alpine
+#   script:
+#     - npm install
+#     - npm run build # Build project to generate dist directory
+#   artifacts:
+#     paths:
+#       - dist # Save the dist directory for deployment
+#   only:
+#     - develop
+
+# # Deploy Stage - Deploy to the VPS
+# deploy:
+#   stage: deploy
+#   before_script:
+#     - mkdir -p ~/.ssh
+#     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+#     - chmod 600 ~/.ssh/id_rsa
+#     - ssh-keyscan $VPS_HOST >> ~/.ssh/known_hosts
+#   script:
+#     # 1. Stop and remove the current backend Docker container on VPS
+#     - ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $VPS_USER@$VPS_HOST "
+#       docker stop backend &&
+#       docker rm backend
+#       "
+#     # 2. Copy the dist directory to the VPS
+#     - scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r dist/ $VPS_USER@$VPS_HOST:$DEPLOY_PATH/dist
+#     # 3. Rebuild and restart the Docker container on the VPS
+#     - ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $VPS_USER@$VPS_HOST "
+#       cd $DEPLOY_PATH &&
+#       docker-compose up -d --build
+#       "
+#   only:
+#     - develop
+
+# stages:
+#   - test
+
+# test_job:
+#   stage: test
+#   script:
+#     - echo "Runner is working!"

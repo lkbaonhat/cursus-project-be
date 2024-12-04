@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            background-color: #e82510;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .track-button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .summary,
+        .shipping {
+            display: inline-block;
+            width: 48%;
+            vertical-align: top;
+        }
+
+        .summary p,
+        .shipping p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .item-details {
+            width: 75%;
+        }
+
+        .item-details h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .item-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .contact div {
+            text-align: center;
+        }
+
+        .referral {
+            background-color: #e74c3c;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .referral a {
+            color: #e74c3c;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .footer .nocopy {
+            padding-top: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Thank You for Your Order!</h1>
+            <p>Your order is in. We're getting it ready to be shipped. Expect a dispatch confirmation email soon.</p>
+        </div>
+        <div class="content">
+            <div style="display: flex; justify-content: space-between;">
+                <div class="summary">
+                    <h3>Summary</h3>
+                    <p><strong>Order #:</strong> {{order._id}}</p>
+                    <p><strong>Date:</strong> {{formatDate order.createdAt "DD-MM-YYYY"}}</p>
+                    <p><strong>Total:</strong> {{formatPrice order.totalAmount}} đ</p>
+                </div>
+            </div>
+            <h2>Your item in this order</h2>
+            {{#each items}}
+            <div class="item">
+                <img src={{this.image}} alt="Course Image">
+                <div class="item-details">
+                    <h4>{{this.title}}</h4>
+                    <p><strong>{{formatPrice this.price}} đ</strong></p>
+                </div>
+            </div>
+            {{/each}}
+            <p class="total">Total: {{formatPrice order.totalAmount}} đ</p>
+        </div>
+        <div class="footer">
+            <h2>Any problems with your order?</h2>
+            <div class="contact" style="display: flex; justify-content: space-between;">
+                <div>
+                    <p>Email Us</p>
+                    <p>cursus.minicapstone@gmail.com</p>
+                </div>
+                <div>
+                    <p>Call Us</p>
+                    <p>+1900 8086</p>
+                </div>
+            </div>
+            <div class="referral">
+                <h3>$30 for you, $30 for a friend</h3>
+                <p>Share the link below and you'll get every friend who places an order over $60.</p>
+            </div>
+            <p class="nocopy">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

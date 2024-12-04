@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cursus-app-442508",
+  "private_key_id": "281511b8171c59a5195cb117d5f69c668873df04",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbWPmHMusprSpc\nXEVr/Q2pHFJ5L5oEkxU+x31wyVHMflXHD8+BsabSuJsAmtDKYg+N1KtJZ7XifCVF\njUN0byZrThY5mmJ1lN7nc5mSPujp+5thdXbogbiZM6BMLSb5eK9uq9feVKcdxpQq\nlD0SOgL/oZ+Ep6tIfgtzdxxi20KhHBg9Wno84qdV1pIkVITpGDA2kibwAx76opuL\nkGmkY0FJFyzJzetC2xyatFVSdS2AoIi7Mf91JEPhaCvmWUJWs6awQDG7UKcz4Jck\nAED366indBhUg5RrCNpoccSFmzd86qKORaHD2qHdc1YJCXatv0dn4c9TGzizK1Zj\nmv59FNsNAgMBAAECggEAGdxf/c/OMivvp1x8+hMwWPysBhyUiTprCP5wtXvuMBq/\n8NmC89Y9LUsqEpmzNF3KtRO4SAoJz2BXXBK+Lf3q6WYgcQpwZZ6Y1PL7l8r9PyZx\noXHKj744mthrUQMbP+CFY+kbkJmLEHvkYoo2+HfL0/517cFz1CeXhGtJwHM7zlH6\nYt3r6jBT389/gRt+Jku3ptjaPsqzQHyh8Wb1JZcR0Q3JzQqWVeUoTIVjwNFSBdES\n1OIlqGLYaymAYsH72IcCCRfukBLt4Nx3pAWIdGKONJdwONUC6179EWXSJf5pQRZH\nxkKGA4FojtblHAZGZ6SI/cbOkKFlHB9x+4KaVKyEAQKBgQDYD2LjuU0Mtrwqly7x\nlwfm9FiLUWFG9MjERR2TgbuMGoUBv3trP5vtV6oKddiyHXPYond3AobeNDUZjoGI\nq/jYtM+HejD1Dll82Hs285e6NqRf5X5ehWNm1ojbdbHrRN/8SauHEKMgVNvmquK9\n8/C2g2+YpZ72nOj96qODzh8KjQKBgQC4EHz9bXmV7OFCspK0LRYbTTHWwlLESN5u\nDwD5CbsCeMaRd8CodFvOmEV2yGgKxuu465tD6xIjgYKUqPmYGbKgLTukk2crptts\nUO+ay80W3e5AndO0sP5fVZWrEp6+mQI6mWV9cFsfuhFn4mmuBx/hOmzzEMn6t/cF\nephzbSUygQKBgQCzHCY1c/KcvIvGnufqnPKPEjao38DNqrUYh9dZ5e1M2tsyNMOi\nh+vCWK781u7Z0TKs/xocDXsyj4MJeaqGW1ICi/mSbMhTDh8/MNMMHenFE/E2EjCt\nONTLdsOjcrEYwVMReRz57d/dOJvHYBhxsdz14IXNvFbISBGaFT6SUHhJLQKBgFve\n5vP7W2+In1qSFQVXZ6xS2Ghv763HDTZzyLGEuNHgBISA+ClcgqJYgHtsRfnzFZ7k\nAkhhIVmVf97BhGr1kKHAUf+wDxPLocOrlhx2UrRyK0QXQp7ypNRivGR508AgUOt8\nuxpkJSdt0NhAOy1Aoxng9pZPr/CzN9mFOmiKdsGBAoGAdPU9he5l7UDlBQT9q2u5\n49pJjchgAZ1JzDxOjFARrEZYYz2ndw8tksy51aGPsaX+fG/z69rAfLhcPm2HnsHs\nozkSGd3vmK3gDh/EhXABIhRHBJ3dtXyfi4W/FlNAU/GLVYXgcnElKRGp3zxyxTme\nP2l+r6uispT42uEKWb9NKTw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cursus-admin@cursus-app-442508.iam.gserviceaccount.com",
+  "client_id": "116820685661652711470",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cursus-admin%40cursus-app-442508.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
