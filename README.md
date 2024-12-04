@@ -4,5 +4,5 @@ Những phần làm chính
 Technology Using
 - Automate send mail
 - MongoDB
-- Redis lưu otp
+- Redis lưu mã otp
 - Framework nestjs vs typescripts
